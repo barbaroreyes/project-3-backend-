@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("./db/connection");
 const tripsController = require("./controllers/trip")
-const agencyController = require("./controllers/agency")
+// const agencyController = require("./controllers/agency")
 const app = express();
 const PORT = process.env.PORT
 //imports
@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 
 app.use('/trips', tripsController)
-app.use('/agencies', agencyController)
+// app.use('/agencies', agencyController)
 
 app.listen(PORT, () => {
   console.log(`Your are listening on port ${PORT}`);

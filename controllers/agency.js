@@ -4,10 +4,10 @@ const Agency = require('../models/agency')
 
 ///GET///
 router.get('/', async (req, res) => {
-    const allAgencies = await Agency.find({})
+    const all = await Agency.find({})
     res.json({
         status: 200,
-        data: allAgencies
+        data: all
     })
 })
 

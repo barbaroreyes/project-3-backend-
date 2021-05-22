@@ -1,9 +1,12 @@
 const mongoose = require('../db/connection')
 const {Schema,model }= mongoose
 const tripSchema = new Schema({
-    title: String,
-    artist: String,
-    time: String
+    name: String,
+    img: String,
+    description: String,
+    activities: [],
+    costs: Number
+
 },{timestamps:true}
 )
 
