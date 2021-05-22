@@ -4,29 +4,29 @@ const Trips = require('../models/trips')
 
 ///GET///
 router.get('/', async (req, res) => {
-    const allTripss = await Trips.find({})
+    const all = await Trips.find({})
     res.json({
         status: 200,
-        data: allTripss
+        data: all
     })
 })
 
 /// POST ///
 router.post('/', async (req, res) => {
-    const allTripss = await Trips.create(req.body)
+    const all = await Trips.create(req.body)
     res.json({
         status: 200,
         msg: "data received",
-        data: allTripss
+        data: all
     })
 })
 
 /// PUT ///
 router.put('/:id', async (req, res) => {
-    const Trips = await Trips.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    const trips = await Trips.findByIdAndUpdate(req.params.id, req.body, {new: true})
     res.json({
         status: 200,
-        data: Trips
+        data: trips
     })
 })
 
