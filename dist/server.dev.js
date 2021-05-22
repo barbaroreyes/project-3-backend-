@@ -10,6 +10,8 @@ var tripsController = require("./controllers/trip");
 
 var agencyController = require("./controllers/agency");
 
+var reviewController = require("./controllers/review");
+
 var app = express();
 var PORT = process.env.PORT; //imports
 
@@ -28,6 +30,7 @@ app.get("/", function (req, res) {
 });
 app.use('/trips', tripsController);
 app.use('/agencies', agencyController);
+app.use('/reviews', reviewController);
 app.listen(PORT, function () {
   console.log("Your are listening on port ".concat(PORT));
 });
