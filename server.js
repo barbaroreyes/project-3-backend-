@@ -4,6 +4,7 @@ const mongoose = require("./db/connection");
 const tripsController = require("./controllers/trip")
 const agencyController = require("./controllers/agency")
 const reviewController = require("./controllers/review")
+const AuthRouter = require('./controllers/user')
 const app = express();
 const PORT = process.env.PORT
 //imports
@@ -19,9 +20,7 @@ app.use(morgan('dev'))
 app.get("/", (req, res) => {
     res.json({ hello: "Hello World!" });
   });
-
-
-
+app.use('/auth',AuthRouter)
 app.use('/trips', tripsController)
 app.use('/agencies', agencyController)
 app.use('/reviews', reviewController)

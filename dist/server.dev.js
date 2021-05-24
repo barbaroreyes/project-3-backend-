@@ -12,6 +12,8 @@ var agencyController = require("./controllers/agency");
 
 var reviewController = require("./controllers/review");
 
+var AuthRouter = require('./controllers/user');
+
 var app = express();
 var PORT = process.env.PORT; //imports
 
@@ -28,6 +30,7 @@ app.get("/", function (req, res) {
     hello: "Hello World!"
   });
 });
+app.use('/auth', AuthRouter);
 app.use('/trips', tripsController);
 app.use('/agencies', agencyController);
 app.use('/reviews', reviewController);
