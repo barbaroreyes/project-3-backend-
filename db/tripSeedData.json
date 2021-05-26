@@ -1,0 +1,24 @@
+[
+	{
+		"location": {
+			"name": "Cairns QLD, Australia"
+		},
+		"activities": ["scuba diving", "boating"],
+		"reviews_ref": [],
+
+		"name": "Cairns Scuba Trip",
+		"photo": "https://prodivecairns.com/images/drone/prodive-drone-nov-2017-003-fullres.43.g.jpg",
+		"description": "Go scuba diving on a boat and see some fishes"
+	},
+	{
+		"location": {
+			"name": "Perth, NSW, Australia"
+		},
+		"activities": ["hiking", "sites"],
+		"reviews_ref": [],
+
+		"name": "Perth Hikes",
+		"photo": "https://prodivecairns.com/images/drone/prodive-drone-nov-2017-003-fullres.43.g.jpg",
+		"description": "Go hiking in Perth"
+	}
+]
